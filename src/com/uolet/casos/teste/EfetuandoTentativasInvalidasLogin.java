@@ -6,7 +6,6 @@ import static org.testng.Assert.fail;
 
 import java.util.concurrent.TimeUnit;
 
-import org.omg.CORBA.COMM_FAILURE;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -70,12 +69,7 @@ public class EfetuandoTentativasInvalidasLogin {
 	      return false;
 	   }
 	} 
-	private void logar(String nome, String senha, String sigla) throws InterruptedException{		
-		//driver.findElement(By.id("username")).sendKeys(nome);
-		//driver.findElement(By.id("password")).sendKeys(senha);
-		//driver.findElement(By.id("merchant")).sendKeys(sigla);
-		//driver.findElement(By.id("btn-login")).click();
-	}	
+	
 	com.uolet.pages.console.PaginaLogin paginaLogar = new com.uolet.pages.console.PaginaLogin(driver);
 	
 	@Test(priority = 0, description = "Tentativa de logar com [todos] os campos vazios")
@@ -108,7 +102,7 @@ public class EfetuandoTentativasInvalidasLogin {
 	}
 	@Test(priority = 7, description = "Tentativa de logar com [nome, sigla, senha] preenchido")
 	public void tentandoLogarPreenchendoTodosCamposUsuarioInvalido() throws InterruptedException{
-		logar("uolet","12345","UQA");
+		paginaLogar.logar("uolet","12345","UQA");
 		for (int second = 0;; second++) {
 	    	if (second >= 60) fail("timeout");
 	    	try { if (!isElementPresent(By.xpath("//button[@class='disabled']"))) break; } catch (Exception e) {}

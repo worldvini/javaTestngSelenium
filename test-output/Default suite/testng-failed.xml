@@ -6,7 +6,7 @@
       <class name="com.uolet.casos.teste.EfetuandoLoginValido">
         <methods>
           <include name="antesTeste"/>
-          <include name="entrandoPaginaEditor"/>
+          <include name="entrandoPaginaEditorUsuarioValido"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.uolet.casos.teste.EfetuandoLoginValido -->

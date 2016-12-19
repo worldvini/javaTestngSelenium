@@ -1,10 +1,12 @@
 package com.uolet.pages.console;
 
-import static org.testng.Assert.fail;
-
+//import static org.testng.Assert.fail;
+//import com.google.common.base.Predicate;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class PaginaLogin {
 	private WebDriver driver;
@@ -16,11 +18,16 @@ public class PaginaLogin {
 	}
 	public PaginaHomeEditor LogandoUsuario(String nome, String senha, String sigla) throws InterruptedException {
 		logar(nome, senha, sigla);
-		for (int second = 0;; second++) {
-	    	if (second >= 60) fail("timeout");
-	    	try { if (!isElementPresent(By.xpath("//button[@class='disabled']"))) break; } catch (Exception e) {}
-	    	Thread.sleep(1000);
-	    }
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		//wait.until(!isElementPresent(By.xpath("//button[@class='disabled']")));
+		//wait.until((Predicate<WebDriver>)driver.findElement(By.xpath("//button[@class='disabled']")));
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@id='btn-logoff']"))));
+		
+		//for (int second = 0;; second++) {
+	    //	if (second >= 60) fail("timeout");
+	    	//try { if (!isElementPresent(By.xpath("//button[@class='disabled']"))) break; } catch (Exception e) {}
+	    	//Thread.sleep(1000);
+	    //}
 		return new PaginaHomeEditor(driver);		
 	}
 	public void logar(String nome, String senha, String sigla){
@@ -29,12 +36,5 @@ public class PaginaLogin {
 		driver.findElement(By.id("merchant")).sendKeys(sigla);
 		driver.findElement(By.id("btn-login")).click();
 	}
-	private boolean isElementPresent(By by) {
-	   try {
-	      driver.findElement(by);
-	      return true;
-	   } catch (NoSuchElementException e) {
-	      return false;
-	   }
-	} 
+	
 }

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41402" started-at="2016-12-16T20:35:12Z" finished-at="2016-12-16T20:35:53Z">
+  <suite name="Default suite" duration-ms="10759" started-at="2016-12-19T16:12:57Z" finished-at="2016-12-19T16:13:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41402" started-at="2016-12-16T20:35:12Z" finished-at="2016-12-16T20:35:53Z">
+    <test name="Default test" duration-ms="10759" started-at="2016-12-19T16:12:57Z" finished-at="2016-12-19T16:13:08Z">
       <class name="com.uolet.casos.teste.EfetuandoLoginValido">
-        <test-method status="PASS" signature="antesTeste()[pri:0, instance:com.uolet.casos.teste.EfetuandoLoginValido@7d9d1a19]" name="antesTeste" is-config="true" duration-ms="30260" started-at="2016-12-16T18:35:12Z" finished-at="2016-12-16T18:35:42Z">
+        <test-method status="PASS" signature="antesTeste()[pri:0, instance:com.uolet.casos.teste.EfetuandoLoginValido@7d9d1a19]" name="antesTeste" is-config="true" duration-ms="4133" started-at="2016-12-19T14:12:57Z" finished-at="2016-12-19T14:13:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- antesTeste -->
-        <test-method status="PASS" signature="entrandoPaginaEditor()[pri:0, instance:com.uolet.casos.teste.EfetuandoLoginValido@7d9d1a19]" name="entrandoPaginaEditor" duration-ms="10966" started-at="2016-12-16T18:35:42Z" finished-at="2016-12-16T18:35:53Z">
+        <test-method status="PASS" signature="entrandoPaginaEditorUsuarioValido()[pri:0, instance:com.uolet.casos.teste.EfetuandoLoginValido@7d9d1a19]" name="entrandoPaginaEditorUsuarioValido" duration-ms="6474" started-at="2016-12-19T14:13:01Z" description="Entrando na pagina do editor, logando na pagina login com usuario valido" finished-at="2016-12-19T14:13:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- entrandoPaginaEditor -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uolet.casos.teste.EfetuandoLoginValido@7d9d1a19]" name="tearDown" is-config="true" duration-ms="132" started-at="2016-12-16T18:35:53Z" finished-at="2016-12-16T18:35:53Z">
+        </test-method> <!-- entrandoPaginaEditorUsuarioValido -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uolet.casos.teste.EfetuandoLoginValido@7d9d1a19]" name="tearDown" is-config="true" duration-ms="83" started-at="2016-12-19T14:13:07Z" finished-at="2016-12-19T14:13:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
