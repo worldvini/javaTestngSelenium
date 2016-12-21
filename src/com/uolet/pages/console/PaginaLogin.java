@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.testng.Assert;
 
 
 public class PaginaLogin {
@@ -21,11 +22,13 @@ public class PaginaLogin {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		//wait.until(!isElementPresent(By.xpath("//button[@class='disabled']")));
 		//wait.until((Predicate<WebDriver>)driver.findElement(By.xpath("//button[@class='disabled']")));
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@id='btn-logoff']"))));
+		//wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@id='btn-logoff']"))));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@id='btn-logoff']")));
 		
 		//for (int second = 0;; second++) {
 	    //	if (second >= 60) fail("timeout");
 	    	//try { if (!isElementPresent(By.xpath("//button[@class='disabled']"))) break; } catch (Exception e) {}
+						//Assert.assertTrue(driver.findElement("//a[@id='btn-logoff']").isVisible());
 	    	//Thread.sleep(1000);
 	    //}
 		return new PaginaHomeEditor(driver);		

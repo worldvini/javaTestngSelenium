@@ -23,7 +23,7 @@ public class EfetuandoLoginValido {
 	public void antesTeste(){
 		System.setProperty("webdriver.chrome.driver", "/opt/chromedriver");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		// new paginalogin
 	}
